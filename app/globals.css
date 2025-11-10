@@ -26,3 +26,29 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Typography Styles */
+h1 {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+h2 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 600; /* Semibold */
+}
+
+h3 {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+.p1 {
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+.a1 {
+  font-family: var(--font-bebas-neue), 'Bebas Neue', sans-serif;
+  font-weight: 400; /* Light - Bebas Neue only has one weight, using 400 */
+}
+

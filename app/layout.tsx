@@ -1,9 +1,19 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Open_Sans, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 
-const inter = Inter({ subsets: ['latin'] })
+const openSans = Open_Sans({ 
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-open-sans',
+})
+
+const bebasNeue = Bebas_Neue({ 
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-bebas-neue',
+})
 
 export const metadata: Metadata = {
   title: 'Fashion & Lifestyle Society',
@@ -17,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${openSans.variable} ${bebasNeue.variable}`}>
         <Navigation />
         <main className="min-h-screen">
           {children}

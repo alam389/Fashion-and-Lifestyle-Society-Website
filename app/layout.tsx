@@ -68,6 +68,15 @@ const helveticaOblique = localFont({
 export const metadata: Metadata = {
   title: 'Fashion & Lifestyle Society',
   description: 'Welcome to the Fashion and Lifestyle Society website',
+  icons: {
+    icon: '/images/fls logo.png',
+    apple: '/images/fls logo.png',
+  },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -77,7 +86,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${bebasNeue.variable} ${didot.variable} ${didotTitle.variable} ${didotItalic.variable} ${helveticaLight.variable} ${helveticaBold.variable} ${helveticaBoldOblique.variable} ${helveticaCompressed.variable} ${helveticaOblique.variable}`}>
+      <body className={`overflow-x-hidden ${openSans.variable} ${bebasNeue.variable} ${didot.variable} ${didotTitle.variable} ${didotItalic.variable} ${helveticaLight.variable} ${helveticaBold.variable} ${helveticaBoldOblique.variable} ${helveticaCompressed.variable} ${helveticaOblique.variable}`}>
         <Navigation />
         <main className="min-h-screen">
           {children}

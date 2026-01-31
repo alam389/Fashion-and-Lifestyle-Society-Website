@@ -40,7 +40,7 @@ export default function ArticleLayout({ article, latestArticles }: ArticleLayout
           <div className="flex-1 max-w-[776px]">
             {/* Breadcrumb */}
             <p
-              className="text-white text-3xl font-light mb-2"
+              className="text-white text-2xl sm:text-3xl font-light mb-2"
               style={{ fontFamily: 'var(--font-helvetica-light)' }}
             >
               VOLTA / {article.category}
@@ -48,7 +48,7 @@ export default function ArticleLayout({ article, latestArticles }: ArticleLayout
             
             {/* Title */}
             <h1
-              className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal mb-4"
+              className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4"
               style={{ fontFamily: 'var(--font-didot)' }}
             >
               {article.title}

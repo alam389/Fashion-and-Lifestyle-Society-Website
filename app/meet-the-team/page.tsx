@@ -116,7 +116,7 @@ export default function MeetTheTeam() {
     <div className="bg-black text-white min-h-screen relative">
       {/* Hero Banner - Fixed and fills viewport */}
       <section className="fixed top-0 left-0 right-0 h-screen w-full flex items-center justify-center text-center z-[5] pointer-events-none">
-        <div className="w-full px-[1.875rem]">
+        <div className="w-full px-4 sm:px-6 lg:px-[1.875rem]">
           <div className="w-full">
             <span
               className="block w-full font-bold text-white leading-tight whitespace-nowrap"
@@ -140,7 +140,7 @@ export default function MeetTheTeam() {
         <div className="h-screen" />
         
         {/* First three team member cards */}
-        <section className="px-[1.875rem] pt-0 pb-0 bg-black">
+        <section className="px-4 sm:px-6 lg:px-[1.875rem] pt-0 pb-0 bg-black">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
             {creativeTeam.slice(0, 3).map((member, index) => (
               <TeamMemberCard key={index} member={member} />
@@ -149,7 +149,7 @@ export default function MeetTheTeam() {
         </section>
         
         {/* Creative Team Section */}
-        <section className="px-[1.875rem] pt-0 pb-0 bg-black">
+        <section className="px-4 sm:px-6 lg:px-[1.875rem] pt-0 pb-0 bg-black">
           <h2
             className="font-bold text-center mb-2 text-white tracking-normal"
             style={{ fontFamily: 'var(--font-helvetica-bold)', fontSize: 'clamp(2.5rem, 6vw, 10rem)' }}
@@ -166,7 +166,7 @@ export default function MeetTheTeam() {
         </section>
 
         {/* Admin Team Section */}
-        <section className="px-[1.875rem] pt-0 pb-0 bg-black">
+        <section className="px-4 sm:px-6 lg:px-[1.875rem] pt-0 pb-0 bg-black">
           <h2
             className="font-bold text-center mb-2 text-white tracking-normal"
             style={{ fontFamily: 'var(--font-helvetica-bold)', fontSize: 'clamp(2.5rem, 6vw, 10rem)' }}

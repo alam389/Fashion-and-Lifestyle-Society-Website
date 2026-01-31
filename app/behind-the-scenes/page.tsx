@@ -3,16 +3,16 @@ export default function BehindTheScenes() {
     <div className="bg-black text-white min-h-screen">
       {/* Hero */}
       <section className="min-h-screen flex items-start relative">
-        <div className="px-[1.875rem] pt-[7rem] w-full">
-          <div className="w-[52rem]">
+        <div className="px-4 sm:px-6 lg:px-[1.875rem] pt-16 sm:pt-20 lg:pt-[7rem] w-full">
+          <div className="w-full max-w-[52rem]">
             <span
-              className="block text-8xl md:text-9xl font-bold"
+              className="block text-5xl sm:text-7xl md:text-8xl md:text-9xl font-bold"
               style={{ fontFamily: 'var(--font-helvetica-bold)' }}
             >
               BEHIND
             </span>
             <span
-              className="block text-8xl md:text-9xl font-bold"
+              className="block text-5xl sm:text-7xl md:text-8xl md:text-9xl font-bold"
               style={{ fontFamily: 'var(--font-helvetica-bold-oblique)' }}
             >
               THE SCENES
@@ -20,11 +20,11 @@ export default function BehindTheScenes() {
           </div>
 
           {/* Divider */}
-          <div className="w-[48rem] h-0 outline outline-1 outline-white mt-4" />
+          <div className="w-full max-w-[48rem] h-0 outline outline-1 outline-white mt-4" />
 
           {/* Intro */}
           <p
-            className="mt-8 max-w-3xl text-2xl tracking-wide"
+            className="mt-6 sm:mt-8 max-w-3xl text-lg sm:text-xl md:text-2xl tracking-wide"
             style={{ fontFamily: 'var(--font-didot)' }}
           >
             A closer look at the creative process behind the runway — from makeup
@@ -33,7 +33,7 @@ export default function BehindTheScenes() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2">
+        <div className="absolute bottom-12 md:bottom-24 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2">
           <p
             className="text-[0.9375rem] text-center"
             style={{ fontFamily: 'var(--font-helvetica-light)' }}
@@ -57,7 +57,7 @@ export default function BehindTheScenes() {
       </section>
 
       {/* BTS Sections */}
-      <section className="px-[1.875rem] py-24 space-y-32">
+      <section className="px-4 sm:px-6 lg:px-[1.875rem] py-12 md:py-24 space-y-16 md:space-y-32">
         <BTSBlock
           title="MAKEUP"
           subtitle="Skin, texture, and expression"
@@ -121,7 +121,7 @@ export default function BehindTheScenes() {
       </section>
 
       {/* Closing */}
-      <section className="px-[1.875rem] pb-32">
+      <section className="px-4 sm:px-6 lg:px-[1.875rem] pb-16 md:pb-32">
         <p
           className="max-w-3xl text-xl text-gray-300"
           style={{ fontFamily: 'var(--font-didot)' }}
@@ -156,7 +156,7 @@ function BTSBlock({
       {/* Images */}
       <div className="w-full md:w-2/3">
         {images.length > 0 ? (
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
             {images.map((src, index) => (
               <div
                 key={index}

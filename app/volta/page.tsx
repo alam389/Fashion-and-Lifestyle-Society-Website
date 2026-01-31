@@ -57,8 +57,8 @@ export default function Volta() {
     <div className="bg-black min-h-screen">
       <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-40 pt-8 sm:pt-12 md:pt-16 lg:pt-10">
        {/* Category Filter Icons */}
-        <div className="mb-8 sm:mb-12">
-          <div className="flex items-center justify-between w-full">
+        <div className="mb-8 sm:mb-12 min-w-0">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-between w-full">
             {categories.map((category) => {
               const iconData = categoryIcons[category]
               const isActive = activeCategory === category

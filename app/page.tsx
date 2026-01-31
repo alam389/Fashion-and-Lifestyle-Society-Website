@@ -104,7 +104,7 @@ function HeroCard({
   if (!href) return content
 
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={alt} className="block">
+    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={alt} className="block h-full w-full">
       {content}
     </a>
   )
@@ -175,18 +175,65 @@ export default function Home() {
     },
   ]
 
+  const galleryImages = [
+    '/images/landing/1.jpg',
+    '/images/landing/2.jpg',
+    '/images/landing/3.jpg',
+    '/images/landing/4.jpg',
+    '/images/landing/5.jpg',
+    '/images/landing/6.jpg',
+    '/images/landing/7.jpg',
+    '/images/landing/8.jpg',
+    '/images/landing/9.JPG',
+    '/images/landing/10.jpg',
+    '/images/landing/11.JPG',
+    '/images/landing/12.JPG',
+    '/images/landing/13.JPG',
+    '/images/landing/14.JPG',
+    '/images/landing/15.JPG',
+    '/images/landing/16.JPG',
+    '/images/landing/17.JPG',
+  ]
+
   return (
     <div className="bg-black text-white">
       {/* HERO / TOP COLLAGE */}
-      <section className="relative mx-auto w-full max-w-6xl px-6 pb-10 pt-10">
-        <div className="relative h-[1500px] w-full">
-          {/* Stickers / decorations */}
+      <section className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 pb-10 pt-10">
+        {/* Mobile: stacked hero cards */}
+        <div className="lg:hidden flex flex-col gap-6">
+          {heroCards.map((card) => (
+            <div key={card.src} className="relative w-full aspect-[4/5] max-h-[420px] overflow-hidden rounded-sm">
+              <HeroCard
+                src={card.src}
+                alt={card.alt}
+                initialText={card.initialText}
+                hoverText={card.hoverText}
+                href={card.href}
+                className="!absolute inset-0 h-full w-full"
+                textWrapperClassName={card.textWrapperClassName}
+                textSize={card.textSize}
+                hoverFontClassName={card.hoverFontClassName}
+                cornerOverlaySrc={card.cornerOverlaySrc}
+                cornerOverlayAlt={card.cornerOverlayAlt}
+                cornerOverlayClassName={card.cornerOverlayClassName}
+              />
+            </div>
+          ))}
+          <a
+            href="#explore"
+            className="inline-flex items-center justify-center gap-2 font-helveticaBold text-sm sm:text-base tracking-[0.2em] text-white/90 transition-colors hover:text-white py-4"
+          >
+            WE INVITE YOU TO EXPLORE <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        {/* Desktop: absolute-positioned collage */}
+        <div className="hidden lg:block relative h-[1500px] w-full">
           {stickers.map((d, idx) => (
             <div key={`${d.src}-${idx}`} className={['pointer-events-none absolute z-10', d.className].join(' ')}>
               <Image src={d.src} alt={d.alt} fill sizes="64px" className="object-contain" />
             </div>
           ))}
-
           {heroCards.map((card) => (
             <HeroCard
               key={card.src}
@@ -204,8 +251,6 @@ export default function Home() {
               cornerOverlayClassName={card.cornerOverlayClassName}
             />
           ))}
-
-          {/* EXPLORE CTA */}
           <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 pb-2 text-center">
             <a
               href="#explore"
@@ -218,50 +263,63 @@ export default function Home() {
       </section>
 
       {/* EXPLORE SECTION (anchor target) */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-16 pt-2 sm:px-10">
-        <div className="mb-10 text-center">
+      <section id="explore" className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10 pb-16 pt-2">
+        <div className="mb-6 sm:mb-10 text-center">
           <h2
-            id="explore"
-            className="inline-flex items-center gap-3 font-helveticaBold text-base tracking-[0.25em] text-white/90"
+            className="inline-flex items-center gap-3 font-helveticaBold text-sm sm:text-base tracking-[0.2em] sm:tracking-[0.25em] text-white/90"
           >
           </h2>
         </div>
 
-        {/* Collage gallery */}
-        <div className="relative mx-auto w-full max-w-6xl">
+        {/* Mobile gallery: 2-column grid */}
+        <div className="grid grid-cols-2 gap-3 sm:hidden">
+          {galleryImages.map((src) => (
+            <div
+              key={src}
+              className="relative aspect-[3/4] overflow-hidden bg-black/20 shadow-[0px_10px_40px_rgba(0,0,0,0.35)]"
+            >
+              <Image
+                src={src}
+                alt="Gallery image"
+                fill
+                sizes="50vw"
+                className="object-cover opacity-80"
+              />
+            </div>
+          ))}
+        </div>
 
-          {/* Desktop/tablet collage (no mobile compatibility yet) */}
-          <div className="relative hidden min-h-[1100px] w-full sm:block">
-            {[
-              { src: '/images/landing/1.jpg', className: 'left-[2%] top-[0%] w-[22%]' },
-              { src: '/images/landing/2.jpg', className: 'left-[28%] top-[6%] w-[26%]' },
-              { src: '/images/landing/3.jpg', className: 'left-[58%] top-[2%] w-[20%]' },
-              { src: '/images/landing/4.jpg', className: 'left-[80%] top-[10%] w-[18%]' },
-              { src: '/images/landing/5.jpg', className: 'left-[10%] top-[28%] w-[28%]' },
-              { src: '/images/landing/6.jpg', className: 'left-[42%] top-[30%] w-[22%]' },
-              { src: '/images/landing/7.jpg', className: 'left-[68%] top-[34%] w-[24%]' },
-              { src: '/images/landing/8.jpg', className: 'left-[4%] top-[68%] w-[24%]' },
-              { src: '/images/landing/9.JPG', className: 'left-[26%] top-[58%] w-[30%]' },
-              { src: '/images/landing/10.jpg', className: 'left-[60%] top-[60%] w-[22%]' },
-              { src: '/images/landing/11.JPG', className: 'left-[8%] top-[80%] w-[26%]' },
-              { src: '/images/landing/12.JPG', className: 'left-[0%] top-[25%] w-[22%]' },
-              { src: '/images/landing/13.JPG', className: 'left-[75%] top-[55%] w-[24%]' },
-              { src: '/images/landing/14.JPG', className: 'left-[82%] top-[85%] w-[24%]' },
-              { src: '/images/landing/15.JPG', className: 'left-[10%] top-[10%] w-[24%]' },
-              { src: '/images/landing/16.JPG', className: 'left-[25%] top-[45%] w-[24%]' },
-              { src: '/images/landing/17.JPG', className: 'left-[50%] top-[50%] w-[24%]' },
-            ].map(({ src, className }) => (
-              <div
-                key={src}
-                className={[
-                  'absolute overflow-hidden bg-black/20 shadow-[0px_10px_40px_rgba(0,0,0,0.35)]',
-                  className,
-                ].join(' ')}
-              >
-                <Image src={src} alt="Gallery image" width={900} height={1200} className="h-auto w-full object-cover opacity-50" />
-              </div>
-            ))}
-          </div>
+        {/* Desktop/tablet collage */}
+        <div className="relative hidden sm:block min-h-[1100px] w-full">
+          {[
+            { src: '/images/landing/1.jpg', className: 'left-[2%] top-[0%] w-[22%]' },
+            { src: '/images/landing/2.jpg', className: 'left-[28%] top-[6%] w-[26%]' },
+            { src: '/images/landing/3.jpg', className: 'left-[58%] top-[2%] w-[20%]' },
+            { src: '/images/landing/4.jpg', className: 'left-[80%] top-[10%] w-[18%]' },
+            { src: '/images/landing/5.jpg', className: 'left-[10%] top-[28%] w-[28%]' },
+            { src: '/images/landing/6.jpg', className: 'left-[42%] top-[30%] w-[22%]' },
+            { src: '/images/landing/7.jpg', className: 'left-[68%] top-[34%] w-[24%]' },
+            { src: '/images/landing/8.jpg', className: 'left-[4%] top-[68%] w-[24%]' },
+            { src: '/images/landing/9.JPG', className: 'left-[26%] top-[58%] w-[30%]' },
+            { src: '/images/landing/10.jpg', className: 'left-[60%] top-[60%] w-[22%]' },
+            { src: '/images/landing/11.JPG', className: 'left-[8%] top-[80%] w-[26%]' },
+            { src: '/images/landing/12.JPG', className: 'left-[0%] top-[25%] w-[22%]' },
+            { src: '/images/landing/13.JPG', className: 'left-[75%] top-[55%] w-[24%]' },
+            { src: '/images/landing/14.JPG', className: 'left-[82%] top-[85%] w-[24%]' },
+            { src: '/images/landing/15.JPG', className: 'left-[10%] top-[10%] w-[24%]' },
+            { src: '/images/landing/16.JPG', className: 'left-[25%] top-[45%] w-[24%]' },
+            { src: '/images/landing/17.JPG', className: 'left-[50%] top-[50%] w-[24%]' },
+          ].map(({ src, className }) => (
+            <div
+              key={src}
+              className={[
+                'absolute overflow-hidden bg-black/20 shadow-[0px_10px_40px_rgba(0,0,0,0.35)]',
+                className,
+              ].join(' ')}
+            >
+              <Image src={src} alt="Gallery image" width={900} height={1200} className="h-auto w-full object-cover opacity-50" />
+            </div>
+          ))}
         </div>
       </section>
     </div>

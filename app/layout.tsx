@@ -82,9 +82,12 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        <footer className="bg-gray-800 text-white py-8 mt-auto">
+        <footer className="bg-black text-white py-8 mt-auto">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
+            <div className="text-center space-y-2">
+              <p className="text-white">
+                Anthony Lam · Sarah Schiang · Jonus Neuman · Natalie Wang
+              </p>
               <p className="text-gray-400">
                 © {new Date().getFullYear()} Fashion & Lifestyle Society. All rights reserved.
               </p>

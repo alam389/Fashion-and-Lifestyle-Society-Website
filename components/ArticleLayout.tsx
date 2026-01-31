@@ -117,8 +117,8 @@ export default function ArticleLayout({ article, latestArticles }: ArticleLayout
             </div>
           </div>
           
-          {/* Sidebar - Right Column */}
-          <div className="lg:w-[384px] lg:flex-shrink-0">
+          {/* Sidebar - Right Column - sticky so it stays visible while scrolling */}
+          <div className="lg:w-[384px] lg:flex-shrink-0 lg:self-start lg:sticky lg:top-[50px]">
             <LatestArticlesSidebar articles={latestArticles} />
           </div>
         </div>

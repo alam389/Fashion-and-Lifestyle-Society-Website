@@ -15,7 +15,7 @@ const runwayImages = [
   '/images/show/pangea/IMG_9072.jpeg',
   '/images/show/pangea/IMG_9094.jpeg',
   '/images/show/pangea/IMG_9104.jpeg',
-  '/images/show/pangea/IMG_9122.jpeg',
+  '/images/show/pangea/IMG_9122.jpeg'
 ]
 
 export default function Pangea() {

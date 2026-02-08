@@ -49,12 +49,14 @@ export default function FutureRelics() {
             >
               Future Relics
             </h1>
+            
 
             {/* Byline */}
             <p
               className="text-white text-sm sm:text-base md:text-lg lg:text-[1.25rem] italic text-center mt-2 sm:mt-3 md:mt-4"
               style={{ fontFamily: 'var(--font-didot-italic)' }}
             >
+              Directed by Claire Francis
             </p>
           </div>
 

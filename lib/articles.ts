@@ -189,7 +189,7 @@ export const articlePreviews: ArticlePreview[] = [
   {
     id: 4,
     slug: 'outfit-repeater-the-rise-of-the-capsule-wardrobe',
-    image: '/images/volta/outfit-repeater/cover.jpg',
+    image: '/images/show/future-relics/IMG_4092.JPG',
     category: 'FASHION',
     title: 'Outfit Repeater: The Rise of the Capsule Wardrobe',
     author: 'Fashion & Lifestyle Society',

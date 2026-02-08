@@ -31,6 +31,13 @@ export default function Show() {
       href: '/show-archive/pangea',
       alt: 'Pangea collection',
     },
+    {
+      image: '/images/show/future-relics/IMG_4120.JPG',
+      title: 'FUTURE RELICS',
+      season: 'FW 2024',
+      href: '/show-archive/future-relics-fw-24',
+      alt: 'Future Relics collection',
+    },
   ]
 
   return (

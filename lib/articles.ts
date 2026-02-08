@@ -128,7 +128,7 @@ export const allArticles: Article[] = [
     category: 'FASHION',
     author: 'Alexia Boyagian',
     date: 'January 30, 2026',
-    heroImage: '/images/volta/outfit-repeater/article-photo.jpg',
+    heroImage: '/images/volta/outfit-repeater/article-photo-DONTUSE.jpg',
     heroImageCaption: '',
     content: [
       {

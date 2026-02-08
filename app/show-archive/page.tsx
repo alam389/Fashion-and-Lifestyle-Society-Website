@@ -46,10 +46,10 @@ export default function Show() {
       <section className="min-h-screen relative flex items-start">
         <div className="px-4 sm:px-6 md:px-8 lg:px-[1.875rem] pt-16 sm:pt-20 md:pt-24 lg:pt-[7rem] w-full">
           <div className="w-full max-w-[46.3125rem]">
-            <span className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-bold block" style={{ fontFamily: 'var(--font-helvetica-bold)' }}>
+            <span className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold block leading-tight" style={{ fontFamily: 'var(--font-helvetica-bold)' }}>
               RUNWAY
             </span>
-            <span className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-bold block" style={{ fontFamily: 'var(--font-helvetica-bold-oblique)' }}>
+            <span className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold block leading-tight" style={{ fontFamily: 'var(--font-helvetica-bold-oblique)' }}>
               ARCHIVE
             </span>
           </div>

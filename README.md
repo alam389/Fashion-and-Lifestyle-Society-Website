@@ -1,4 +1,4 @@
-# Fashion-and-Lifestyle-Society-Website
+how # Fashion-and-Lifestyle-Society-Website
 
 A Next.js website for the Fashion and Lifestyle Society, built with TypeScript and Tailwind CSS.
 
